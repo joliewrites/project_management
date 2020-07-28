@@ -1,5 +1,8 @@
 # README
 
+Rails 6.0 project managements app
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
