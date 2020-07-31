@@ -25,7 +25,7 @@ class TasksController < ApplicationController
     @task = @project.tasks.build(task_params)
 
     if @task.save
-      redirect_to([@task.project, @task], notice: 'Task was successfully created.')
+      redirect_to([@task.project, @task])
     else
       render action: 'new'
     end
