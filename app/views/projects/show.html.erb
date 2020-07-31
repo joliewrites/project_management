@@ -30,6 +30,7 @@
   </tr>
 
 <% @project.tasks.each do |task| %>
+  if task.persisted?
   <tr>
     <td><%= task.name %></td>
     <td><%= task.description %></td>
