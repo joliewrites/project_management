@@ -1,5 +1,11 @@
 class Task < ApplicationRecord
   belongs_to :project
 
-  validates :status, inclusion: { in: ['Not started','In progress', 'Complete'] }
+  validates :status, inclusion: { in: ['not-started','in-progress', 'complete'] }
+
+  STATUS_OPTIONS = [
+    ['Not started', 'not-started'],
+    ['In progress', 'in-progress'],
+    ['Complete', 'complete']
+  ]
 end
