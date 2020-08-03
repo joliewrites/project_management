@@ -2,12 +2,14 @@
   <div class='card-body'>
     <h2 class="card-title d-flex justify-content-between mb-4">
       <span> <%= @project.name %></span>
-      <%= link_to 'Add Task', new_project_task_path(@project.id), class: 'btn btn-primary' %>
       <div>
         <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-warning' %>
         <%= link_to 'Delete', [@task.project, @task], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
       </div>
     </h2>
+    <h6>Add task</h6>
+
+    <%= render 'form' %>
   </div>
 </div>
 
